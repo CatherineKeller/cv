@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="7" fill="#1f1b12"/>
+  <defs>
+    <linearGradient id="g" x1="6" y1="8" x2="26" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f5f0e6"/>
+      <stop offset="100%" stop-color="#e9a43c"/>
+    </linearGradient>
+  </defs>
+  <text
+    x="16"
+    y="22"
+    text-anchor="middle"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    font-size="13"
+    font-weight="600"
+    letter-spacing="-0.5"
+    fill="url(#g)"
+  >CK</text>
+</svg>
