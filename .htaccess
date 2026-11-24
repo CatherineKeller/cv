@@ -1,0 +1,27 @@
+SetEnv PHP_VER 5_TEST
+SetEnv REGISTER_GLOBALS 0
+
+# Redirection en www
+#RewriteEngine on
+#Rewritecond %{HTTP_HOST} ^catherine-keller.fr$
+#Rewriterule ^(.*) https://www.catherine-keller.fr/$1 [QSA,L,R=301]
+
+#RewriteEngine On
+#RewriteCond %{ENV:HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.catherine-keller.fr/$1 [R,L]
+
+# Compression
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE text/html text/css text/php text/plain text/xml application/x-javascript
+
+# Cache : stocke les images
+<ifmodule mod_expires.c>
+    <filesmatch ".(jpg|jpeg|png|gif|js|css|swf|ico)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 1 months"
+    </filesmatch>
+</ifmodule>
